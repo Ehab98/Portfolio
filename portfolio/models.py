@@ -39,3 +39,28 @@ class Portfolio_Model(models.Model):
 
     def __str__(self):
         return self.project_name
+
+
+
+class Coding_skills(models.Model):
+
+    codeing_skill_name =models.CharField(max_length=100)
+    progress = models.IntegerField()
+    class Meta:
+        verbose_name = ("Coding_skill")
+        verbose_name_plural = ("Coding_skillss")
+
+    def __str__(self):
+        return self.codeing_skill_name
+
+class Design_skills(models.Model):
+
+    design_skill_name =models.CharField(max_length=100)
+    progress = models.IntegerField()
+    class Meta:
+        verbose_name = ("Design_skill")
+        verbose_name_plural = ("Design_skills")
+
+    def __str__(self):
+        return self.design_skill_name
+

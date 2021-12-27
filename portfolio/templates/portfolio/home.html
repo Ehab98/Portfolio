@@ -28,10 +28,10 @@
                 {% for cv in cv_info %}
                 <form action="{{cv.cv_link}}" method="post" target="_blank">
                     {% csrf_token %}
-                    <button class="btn btn-theme-outline" type="submit"  >Download CV </button>
+                    <button class="btn btn-theme-outline" type="submit">Download CV </button>
                 </form>
-                {% endfor %} 
-                    
+                {% endfor %}
+
             </div>
         </div>
     </div>
@@ -41,60 +41,30 @@
             <div class="col-md-6">
                 <div class="px-lg-3">
                     <h4 class="wow fadeInUp">Coding skills</h4>
+                    {% for code in code %}
                     <div class="progress-wrapper wow fadeInUp">
-                        <span class="caption">Django</span>
+                        <span class="caption">{{code.codeing_skill_name}}</span>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 86%;" aria-valuenow="75"
-                                aria-valuemin="0" aria-valuemax="100">86%</div>
+                            <div class="progress-bar" role="progressbar" style="width: 100% ;" aria-valuenow="75"
+                                aria-valuemin="0" aria-valuemax="100">{{code.progress}}%</div>
                         </div>
                     </div>
-                    <div class="progress-wrapper wow fadeInUp">
-                        <span class="caption">Django Rest Framework</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="75"
-                                aria-valuemin="0" aria-valuemax="100">80%</div>
-                        </div>
-                    </div>
-                    <div class="progress-wrapper wow fadeInUp">
-                        <span class="caption">HTML + CSS</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75"
-                                aria-valuemin="0" aria-valuemax="100">100%</div>
-                        </div>
-                    </div>
-                    <div class="progress-wrapper wow fadeInUp">
-                        <span class="caption">Phyton</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75"
-                                aria-valuemin="0" aria-valuemax="100">90%</div>
-                        </div>
-                    </div>
-                    <div class="progress-wrapper wow fadeInUp">
-                        <span class="caption">Mysql ,SQLite</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75"
-                                aria-valuemin="0" aria-valuemax="100">90%</div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="px-lg-3">
                     <h4 class="wow fadeInUp">Design Skills</h4>
+                    
+                    {% for design in design  %}    
                     <div class="progress-wrapper wow fadeInUp">
-                        <span class="caption">Photoshop</span>
+                        <span class="caption">{{design.design_skill_name}}</span>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 92%;" aria-valuenow="75"
-                                aria-valuemin="0" aria-valuemax="100">92%</div>
+                            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75"
+                                aria-valuemin="0" aria-valuemax="100">{{design.progress}}%</div>
                         </div>
                     </div>
-                    <div class="progress-wrapper wow fadeInUp">
-                        <span class="caption">Logo Design</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 79%;" aria-valuenow="75"
-                                aria-valuemin="0" aria-valuemax="100">79%</div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
