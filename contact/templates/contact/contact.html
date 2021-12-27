@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+
+
+<!-- Contact -->
+<div class="vg-page page-contact" id="contact">
+    <div class="container-fluid">
+        <div class="text-center wow fadeInUp">
+            <div class="badge badge-subhead">Contact</div>
+        </div>
+        <h1 class="text-center fw-normal wow fadeInUp">Get in touch</h1>
+        <div class="row py-5">
+            <div class="col-lg-8">
+                <form class="form-contact contact_form" method="post">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-6 mt-3 wow fadeInUp">
+                            <input class="form-control" type="text" name="email" placeholder="Email Address">
+                        </div>
+                        <div class="col-6 mt-3 wow fadeInUp">
+                            <input class="form-control" type="text" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="col-12 mt-3 wow fadeInUp">
+                            <textarea class="form-control" name="message" rows="6"
+                                placeholder="Enter message here.."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-home"></i></span>
+                    <div class="media-body">
+                        <h6>{{myinfo.palce}}</h6>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                    <div class="media-body">
+                        <h6>{{myinfo.Phone_1}}</h6>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                    <div class="media-body">
+                        <h6>{{myinfo.Phone_2}}</h6>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-email"></i></span>
+                    <div class="media-body">
+                        <h6>{{myinfo.email}}</h6>
+                        <p>Send Me your query anytime!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div> <!-- End Contact -->
+
+{% endblock body %}
