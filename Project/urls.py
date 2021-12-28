@@ -22,7 +22,7 @@ import portfolio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('portfolio/',include('portfolio.urls')),
+    path('',include('portfolio.urls')),
     path('contact/',include('contact.urls')),
     
 ]
