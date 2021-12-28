@@ -1,5 +1,5 @@
-asgiref==3.4.1
-Django==4.0
+asgiref
+Django
 django-bootstrap4==21.1
 Pillow==8.4.0
 soupsieve==2.3.1
